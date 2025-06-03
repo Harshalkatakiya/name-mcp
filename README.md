@@ -1,6 +1,6 @@
-# Name MCP Server
+# Name.com MCP Server
 
-Name-mcp is a Model Context Protocol (MCP) server implemented in TypeScript. It interfaces with Name's Domain Availability API, allowing AI agents and applications to check the availability of single or multiple domain names through standardized tools.
+name-mcp is a Model Context Protocol (MCP) server implemented in TypeScript. It interfaces with name.com's Domain Availability API, allowing AI agents and applications to check the availability of multiple domain names with price through standardized tools.
 
 ---
 
@@ -19,15 +19,14 @@ Name-mcp is a Model Context Protocol (MCP) server implemented in TypeScript. It 
 
 This project utilizes the [@modelcontextprotocol/sdk](https://github.com/modelcontextprotocol/typescript-sdk) to create an MCP-compliant server. MCP is an open standard that enables seamless integration between AI models and external tools or data sources.([1](https://modelcontextprotocol.io/introduction))
 
-By exposing Name's domain availability checks as MCP tools, this server allows AI agents to programmatically verify domain availability.
+By exposing name.com's domain availability checks as MCP tools, this server allows AI agents to programmatically verify domain availability.
 
 ---
 
 ## Features
 
-- Check the availability of a single or multiple domains at once.
-- Supports both `FAST` and `FULL` check types.
-- Optionally include domains available for transfer.
+- Check the availability of multiple domains upto 50 at once.
+- Gives purchase prices and renewal prices for each domain which are available for purchase.
 - Implements MCP tools for integration with AI agents.
 
 ---
@@ -36,9 +35,9 @@ By exposing Name's domain availability checks as MCP tools, this server allows A
 
 Add below environment variables to your mcpserver's configuration:
 
-- **Name_API_BASE_URL**: Base URL for Name's API. `https://api.ote-Name.com` or `https://api.Name.com`.
-- **Name_API_KEY**: Your Name API key.
-- **Name_API_SECRET**: Your Name API secret.
+- **NAME_API_BASE_URL**: Base URL for Name.com's API. `https://api.dev.name.com` or `https://api.name.com`.
+- **NAME_USERNAME**: Your Username for API.
+- **NAME_API_TOKEN**: Your API Token.
 
 ---
 
@@ -53,9 +52,9 @@ To integrate this server with an MCP client, include the following configuration
       "command": "npx",
       "args": ["-y", "Name-mcp"],
       "env": {
-        "Name_API_BASE_URL": "<Name-api-base-url>",
-        "Name_API_KEY": "<Name-api-key>",
-        "Name_API_SECRET": "<Name-api-secret>"
+        "NAME_API_BASE_URL": "<Name-api-base-url>",
+        "NAME_USERNAME": "<Name-api-key>",
+        "NAME_API_TOKEN": "<Name-api-secret>"
       }
     }
   }
