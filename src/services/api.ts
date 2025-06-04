@@ -27,9 +27,7 @@ export async function checkMultipleDomains(
         });
         if (response.status === 200) {
             const data = await response.json() as DomainAvailabilitySuccessFields;
-            for (const item of data.results) {
-                item.purchasable = !!item.purchasable;
-            }
+            data.results.forEach(item => item.purchasable ||= false);
             return data;
         } else {
             return (await response.json()) as DomainAvailabilityErrorFields;
