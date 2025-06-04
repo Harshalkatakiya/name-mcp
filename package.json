@@ -2,7 +2,7 @@
     "name": "name-mcp",
     "description": "Model Context Protocol (MCP) server for name.com",
     "type": "module",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "license": "MIT",
     "main": "./build/index.js",
     "types": "./build/index.d.ts",
