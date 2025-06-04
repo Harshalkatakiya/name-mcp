@@ -31,6 +31,18 @@ By exposing name.com's domain availability checks as MCP tools, this server allo
 
 ---
 
+## Components
+
+### Tools
+
+- **check-multiple-domains-availability**
+  - Check the availability of multiple domains upto 50 at once.
+  - Input: `domainNames` (string[]): domains in string of array to check availability for
+  - Gives purchase prices and renewal prices for each domain which are available for purchase.
+  - Uses name.com's Domain Availability API.
+
+---
+
 ## Environment Variables
 
 Add below environment variables to your mcpserver's configuration:
@@ -43,7 +55,9 @@ Add below environment variables to your mcpserver's configuration:
 
 ## MCP Configuration
 
-To integrate this server with an MCP client, include the following configuration in your MCP JSON:
+This MCP Server can be used with any MCP client like VS Code, Cursor, Trae, Claude Desktop, Windsurf IDE, etc.
+
+To integrate this server with an MCP client, add the following JSON block to your User Settings (JSON) file in VS Code. You can do this by pressing `Ctrl + Shift + P` and typing `Preferences: Open User Settings (JSON)`:
 
 ```json
 {
