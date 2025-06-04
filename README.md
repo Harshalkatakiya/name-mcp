@@ -45,6 +45,10 @@ By exposing name.com's domain availability checks as MCP tools, this server allo
 
 ## Environment Variables
 
+Signup in Name.com as Reseller and Go to Reseller Dashboard of Name.com to get your API credentials.
+
+> Note: Add your current IP address to the list of allowed IP addresses unless this will give the error `Your Current IP address is not added to the list of allowed IP addresses`.
+
 Add below environment variables to your mcpserver's configuration:
 
 - **NAME_API_BASE_URL**: Base URL for Name.com's API. `https://api.dev.name.com` or `https://api.name.com`.
